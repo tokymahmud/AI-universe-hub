@@ -50,7 +50,7 @@ ais.forEach(ai => {
     </div>
 
     <div class="gap-5 p-4 position-relative ">
-    <i class="fa-solid fa-arrow-right position-absolute top-0 start-100 translate-middle fs-1 text-danger rounded-circle bg-danger bg-opacity-25 align-items-center justify-content-center"></i>
+    <i class="fa-solid fa-arrow-right position-absolute top-0 start-100 translate-middle fs-1 text-danger rounded-circle bg-danger bg-opacity-25 align-items-center justify-content-center mx-5 mt-4"></i>
     </div>
   </div>
 `
