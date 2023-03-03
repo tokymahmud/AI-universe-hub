@@ -23,10 +23,10 @@ ais.forEach(ai => {
     const aidiv = document.createElement('div');
     aidiv.classList.add('col');
     aidiv.innerHTML = `
-    <div class="card h-100">
-    <img src="${ai.image}" class="card-img-top" alt="...">
+    <div class="card h-100 p-3">
+    <img src="${ai.image}" class="card-img-top rounded" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Features</h5>
+      <h5 class="card-title ">Features</h5>
       <ol type="1">
       <li>
       ${ai.features[0]      }
@@ -42,10 +42,15 @@ ais.forEach(ai => {
         
       
     </div>
-    <div class="card-footer">
-    <h5 class="card-title"> ${ai.name     }</h5>
+    <hr>
+    <div class=" d-flex">
+    <div>
+    <h5 class="card-title"> ${ai.name}</h5>
+    <i class="fa-regular fa-calendar-days "> <span class="fs-6">${ai.published_in}   </span> </i>
+    </div>
 
-      <small class="text-muted">Last updated 3 mins ago</small>
+    <div class="gap-5 p-4 position-relative ">
+    <i class="fa-solid fa-arrow-right position-absolute top-0 start-100 translate-middle fs-1 text-danger rounded-circle bg-danger bg-opacity-25 align-items-center justify-content-center"></i>
     </div>
   </div>
 `
