@@ -126,4 +126,63 @@ const displaymodaldetail = modal =>{
     console.log(modal);
     const modalTitle = document.getElementById('arrowModalLabel');
     modalTitle.innerText = modal.description;
+   const  modalPrice = document.getElementById('modalpricing');
+   
+   modalPrice.innerHTML =`
+   <div >${modal.pricing[0].price? modal.pricing[0].price:'free of cost!!' }</div>
+    <div>${modal.pricing[1].price? modal.pricing[1].price:'free of cost!!' }</div>
+    <div>${modal.pricing[2].price? modal.pricing[2].price:'free of cost!!' }</div>
+   `
+   const  modalfeature = document.getElementById('modalf');
+  
+   
+   modalfeature.innerHTML =`
+   <ol>
+      <li>
+      ${modal.features[1].feature_name? modal.features[1].feature_name:"No feature!!"      }
+      </li>
+      <li>
+      ${modal.features[2].feature_name? modal.features[2].feature_name:"No feature!!"      }
+      </li>
+      <li>
+      ${modal.features[3].feature_name? modal.features[3].feature_name:"No feature!!"      }
+      </li>
+      </ol>
+   
+   `
+   const  modalintegration = document.getElementById('modali');
+   
+   
+   modalintegration.innerHTML =`
+   <ol>
+      <li>
+      ${modal.integrations[0]? modal.integrations[0]:"No data found"      }
+      </li>
+      <li>
+      ${modal.integrations[2]? modal.integrations[2]:"No data found"      }
+      </li>
+      <li>
+      ${modal.integrations[3]? modal.integrations[3]:"No data found"      }
+      </li>
+      </ol>
+   
+   `
+   const  modalimage = document.getElementById('modalimg');
+   
+   
+   modalimage.innerHTML =`
+   <img src="${modal.image_link[0]}" class="img-thumbnail figure-img img-fluid rounded" alt="...">
+   
+   `
+   const  modalinpout = document.getElementById('io');
+   
+   
+   modalinpout .innerHTML =`
+   <h3>${modal.input_output_examples[0].input}</h3>
+   <p>${modal.input_output_examples[0].output}</p>
+
+   
+   `
+
+   
 }
