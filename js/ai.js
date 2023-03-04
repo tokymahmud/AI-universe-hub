@@ -130,6 +130,7 @@ const displaymodaldetail = modal =>{
    
    modalPrice.innerHTML =`
    <div >${modal.pricing[0].price? modal.pricing[0].price:'free of cost!!' }</div>
+   
     <div>${modal.pricing[1].price? modal.pricing[1].price:'free of cost!!' }</div>
     <div>${modal.pricing[2].price? modal.pricing[2].price:'free of cost!!' }</div>
    `
@@ -171,7 +172,13 @@ const displaymodaldetail = modal =>{
    
    
    modalimage.innerHTML =`
+   <div class="position-relative">
+  
+   <div class="position-absolute top-0 end-0 fw-bold bg-danger p-2 text-light border border-danger">${modal.accuracy.score*100}</div>
+   
+ </div>
    <img src="${modal.image_link[0]}" class="img-thumbnail figure-img img-fluid rounded" alt="...">
+  
    
    `
    const  modalinpout = document.getElementById('io');
