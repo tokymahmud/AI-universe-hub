@@ -129,10 +129,10 @@ const displaymodaldetail = modal =>{
    const  modalPrice = document.getElementById('modalpricing');
    
    modalPrice.innerHTML =`
-   <div class="border border-white p-2 text-success fw-bolder fs-3"  >${modal.pricing[0].price? modal.pricing[0].price:'free of cost!!' }</div>
+   <div class="border border-white p-2 text-success fw-bolder fs-3 bg-light rounded gap-2"  >${modal.pricing[0].price? modal.pricing[0].price:'free of cost!!' }</div>
    
-    <div class="border border-white p-2 text-danger-emphasis fw-bolder fs-3">${modal.pricing[1].price? modal.pricing[1].price:'free of cost!!' }</div>
-    <div class="border border-white p-2 text-danger fw-bolder fs-3">${modal.pricing[2].price? modal.pricing[2].price:'free of cost!!' }</div>
+    <div class="border border-white p-2 text-danger-emphasis fw-bolder fs-3 bg-light rounded gap-2">${modal.pricing[1].price? modal.pricing[1].price:'free of cost!!' }</div>
+    <div class="border border-white p-2 text-danger fw-bolder fs-3 bg-light rounded gap-2">${modal.pricing[2].price? modal.pricing[2].price:'free of cost!!' }</div>
    `
    const  modalfeature = document.getElementById('modalf');
   
@@ -174,7 +174,7 @@ const displaymodaldetail = modal =>{
    modalimage.innerHTML =`
    <div class="position-relative">
   
-   <div class="position-absolute top-0 end-0 fw-bold bg-danger p-2  border border-danger">${modal.accuracy.score*100} % accuracy</div>
+   <div class="position-absolute top-0 end-0 fw-bold bg-danger p-2  border border-danger rounded text-light">${modal.accuracy.score*100? modal.accuracy.score*100:"" }% accuracy </div>
    
  </div>
    <img src="${modal.image_link[0]}" class="img-thumbnail figure-img img-fluid rounded" alt="...">
@@ -185,8 +185,8 @@ const displaymodaldetail = modal =>{
    
    
    modalinpout .innerHTML =`
-   <h3>${modal.input_output_examples[0].input}</h3>
-   <p>${modal.input_output_examples[0].output}</p>
+   <h3>${modal.input_output_examples[0].input? modal.input_output_examples[0].input :"Can you give any example?"}</h3>
+   <p>${modal.input_output_examples[0].output? modal.input_output_examples[0].output:"No! Not Yet! Take a break!!!"}</p>
 
    
    `
