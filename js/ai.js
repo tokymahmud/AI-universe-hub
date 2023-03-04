@@ -32,7 +32,7 @@ const displayai = ais=>{
 
 // slice part
 if(ais.length >5){
-    ais = ais.slice(0, 6);
+    ais = ais.slice(0, 12);
     const showAll = document.getElementById('show-all');
     showAll.classList.remove('d-none');
 }
@@ -129,10 +129,10 @@ const displaymodaldetail = modal =>{
    const  modalPrice = document.getElementById('modalpricing');
    
    modalPrice.innerHTML =`
-   <div >${modal.pricing[0].price? modal.pricing[0].price:'free of cost!!' }</div>
+   <div class="border border-white p-2 text-success fw-bolder fs-3"  >${modal.pricing[0].price? modal.pricing[0].price:'free of cost!!' }</div>
    
-    <div>${modal.pricing[1].price? modal.pricing[1].price:'free of cost!!' }</div>
-    <div>${modal.pricing[2].price? modal.pricing[2].price:'free of cost!!' }</div>
+    <div class="border border-white p-2 text-danger-emphasis fw-bolder fs-3">${modal.pricing[1].price? modal.pricing[1].price:'free of cost!!' }</div>
+    <div class="border border-white p-2 text-danger fw-bolder fs-3">${modal.pricing[2].price? modal.pricing[2].price:'free of cost!!' }</div>
    `
    const  modalfeature = document.getElementById('modalf');
   
@@ -174,7 +174,7 @@ const displaymodaldetail = modal =>{
    modalimage.innerHTML =`
    <div class="position-relative">
   
-   <div class="position-absolute top-0 end-0 fw-bold bg-danger p-2 text-light border border-danger">${modal.accuracy.score*100}</div>
+   <div class="position-absolute top-0 end-0 fw-bold bg-danger p-2  border border-danger">${modal.accuracy.score*100} % accuracy</div>
    
  </div>
    <img src="${modal.image_link[0]}" class="img-thumbnail figure-img img-fluid rounded" alt="...">

@@ -43,7 +43,7 @@
 
 <!-- show more part -->
 <section   id="show-all" style="width: 400px; " class="d-none align-items-center justify-content-center p-4">
-    <button id="btn-show-all" type="button" class="btn btn-danger">Show more</button>
+    <button onclick="showalltogether()" id="btn-show-all" type="button" class="btn btn-danger">Show more</button>
 
 </section>
 
@@ -62,8 +62,8 @@
               <button type="button" class="btn-close bg-danger rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="grid p-2 gap-3 border border-2">
-                    <div class="p-2 g-col-6 text-bg-light">
+                <div class="grid p-4 gap-3 border  d-flex ">
+                    <div class="p-2 g-col-6 text-bg-light border border-danger rounded">
                         <h1 class="modal-title fs-5" id="arrowModalLabel"></h1>
                         <div class="d-flex" id="modalpricing" >
                             
@@ -83,7 +83,7 @@
                         </div>
     
                     </div>
-                    <div class="p-2 g-col-6 border border-2">
+                    <div class="p-2 g-col-6 border border-2 rounded">
                         <div id="modalimg">
                             
 
