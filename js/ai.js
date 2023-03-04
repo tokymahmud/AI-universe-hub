@@ -24,6 +24,7 @@ const toogleSpinner = isLoading =>{
 } 
 
 
+
 const displayai = ais=>{
     console.log(ais);
     const aiscontainer = document.getElementById('ai-Container');
@@ -193,3 +194,9 @@ const displaymodaldetail = modal =>{
 
    
 }
+
+// const sortbydate= () =>{
+//     const datesforsort = ${ais.published_in};
+//     dates = datesforsort.sort();
+
+// }
